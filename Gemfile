@@ -48,3 +48,5 @@ end
 
 gem "faker", "~> 2.18.0"
 
+
+gem "dockerfile-rails", ">= 1.6", :group => :development

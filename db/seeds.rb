@@ -11,16 +11,14 @@
 
 # Crear recetas falsas asociadas a usuarios existentes
 
-10.times do
+3.times do
    recipe = Recipe.create(
       dish: Faker::Food.dish,
       description: Faker::Food.description,
-      # category: Faker::Food.ethnic_category,
       fruit: Faker::Food.fruits,
       ingredient: Faker::Food.ingredients,
       spice: Faker::Food.spice,
       vegetables: Faker::Food.vegetables,
-      # image: Faker::LoremFlickr.image(size: "400x400", search_terms: ['food']),
-      user_id: "syzUgkDxiJXFB8e148ZcGjecNYW2"
+      user_id: "W5xyDnF3A0S6DiCy7aZPDgJL5P22"
    )
 end

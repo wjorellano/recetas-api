@@ -5,6 +5,18 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
+  def filter
+    @recipes = Recipe.where(user_id: params[:user_id])
+    render json: @recipes
+  end
+
+  def search
+  #los usuarios podran buscar recetas por nombre de platillo o ingredietntes
+    @recipes = Recipe.where("dish LIKE ? OR ingredient LIKE ?", "%#{params[:dish]}%", "%#{params[:ingredient]}%")
+    # @recipes = Recipe.where("dish LIKE ?", "%#{params[:dish]}%" )
+    render json: @recipes
+  end
+
   def show
   end
 
